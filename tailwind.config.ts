@@ -11,6 +11,11 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        "redhsl": "var(--redhsl)",
+        "cyanhsl": "var(--cyanhsl)",
+        "orangehsl": "var(--orangehsl)",
+        "bluehsl": "var(--bluehsl)",
+        "darkBlue": "var(--darkBlue)"
       },
     },
   },
