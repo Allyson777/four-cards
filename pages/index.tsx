@@ -1,114 +1,37 @@
 import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export default function Home() {
   return (
-    <div
-      className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              pages/index.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="flex flex-col w-full h-full items-center justify-center ">
+      <header className="flex flex-col sm:max-w-80 lg:max-w-xl h-full items-center justify-center text-center">
+        <h1 className="text-2xl font-light ">Reliable, efficent delivery</h1>
+        <h1 className="text-2xl font-bold">Powered by Technolgy</h1>
+        <p className="">Our Artificial Intelligence powered tools use millions of project data points to ensure that your project is successful</p>
+      </header>
+      <div className="flex flex-col xl:flex-row w-full h-full bg-white gap-y-16 mt-20 xl:gap-12 justify-center items-center xl:mt-20 ">
+        <div className="flex w-80 h-60 md:w-96 md:h-64 shadow-xl rounded-md border-t-4 border-t-cyanhsl shadow-gray-400 p-8 flex-col">
+          <h1 className="flex text-xl font-bold text-[#4D4F62]">Supervisor</h1>
+          <p className="text-[#4D4F62] pt-4">Monitors activity to identify project roadblocks</p>
+          <Image src="/search.svg" width={56} height={56} alt="home" className="flex text-end object-cover self-end  " />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+        <div className="gap-y-4">
+          <div className="flex w-80 h-60 md:w-96 md:h-64 shadow-xl rounded-md border-t-4 border-t-redhsl shadow-gray-400 p-8 flex-col">
+            <h1 className="flex text-xl font-bold text-[#4D4F62]">Team builder</h1>
+            <p className="text-[#4D4F62] pt-4">Scans our talent network to create the optimal team for your project</p>
+            <Image src="/homepage.svg" width={56} height={56} alt="home" className="flex text-end object-cover self-end" />
+          </div>
+          <div className="flex w-80 h-60 md:w-96 md:h-64 shadow-xl rounded-md border-t-4 border-t-orangehsl mt-20 md:mt-10 shadow-gray-400 p-8 flex-col">
+            <h1 className="flex text-xl font-bold text-[#4D4F62]">Karma</h1>
+            <p className="text-[#4D4F62] pt-4">Regularly evaluates our talent to ensure quality</p>
+            <Image src="/lamp.svg" width={56} height={56} alt="home" className="flex text-end object-cover self-end p" />
+          </div>
+        </div>
+        <div className="flex w-80 h-60 md:w-96 md:h-64 shadow-2xl rounded-md border-t-4 border-t-bluehsl shadow-gray-400 p-8 flex-col">
+          <h1 className="flex text-xl font-bold text-[#4D4F62] ">Calculator</h1>
+          <p className="text-[#4D4F62] pt-4">Uses data from past projects to provide better delivery estimates</p>
+          <Image src="/software.svg" width={56} height={56} alt="home" className="flex text-end object-cover self-end " />
+        </div>
+      </div>
+    </main>
+  )
 }
